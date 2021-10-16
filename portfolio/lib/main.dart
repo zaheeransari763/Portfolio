@@ -9,13 +9,11 @@ import 'package:responsive_framework/responsive_framework.dart';
 import 'package:responsive_framework/responsive_wrapper.dart';
 import 'package:firebase_core/firebase_core.dart';
 
-Future<void> main() async {
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
   runApp(MyApp());
 }
-
-
 
 class MyApp extends StatelessWidget {
   @override
@@ -31,7 +29,6 @@ class MyApp extends StatelessWidget {
         canvasColor: BackgroundColor,
         textTheme: GoogleFonts.latoTextTheme(),
       ),
-
       builder: (context, widget) => ResponsiveWrapper.builder(
         ClampingScrollWrapper.builder(context, widget),
         defaultScale: true,
@@ -52,13 +49,7 @@ class MyApp extends StatelessWidget {
         Community.id: (context) => Community(),
         Work.id: (context) => Work(),
       },
-
       home: Profile(),
     );
   }
 }
-
-
-
-
-
