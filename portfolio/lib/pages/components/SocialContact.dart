@@ -5,16 +5,6 @@ import 'package:portfolio/utils/constant.dart';
 import 'package:portfolio/utils/screen_helper.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 
-/*
-final List<String> SocialLogo = [
-  "assets/Datastage_logo.png",
-  "assets/hadoop_logo.png",
-  "assets/informatic_logo.png",
-  "assets/microsoft-sql_logo.png",
-  "assets/oracle_logo.png",
-  "assets/power-bi_logo.png",
-];
-*/
 
 class SocialContact extends StatelessWidget {
   @override
@@ -73,7 +63,7 @@ Widget _buildUi(double width) {
                           onTap: (){
                            Url.openLink(url:'https://twitter.com/AnsariZaheerAh2?t=pgxi51MC4nSB0Ty2YHNvmg&s=08');
                           },
-                            child: Image.asset("assets/twitter.png",height: 60,width: 60,)
+                            child: Image.asset("assets/twitter.png",height: 40,width: 40,)
                         )
                     ),
                   ),
@@ -85,7 +75,7 @@ Widget _buildUi(double width) {
                             onTap: (){
                               Url.openLink(url:'https://www.facebook.com/zaheer.ansari.399');
                             },
-                            child: Image.asset("assets/facebook.png",height: 60,width: 60,))),
+                            child: Image.asset("assets/facebook.png",height: 40,width: 40,))),
                   ),
                   Tooltip(
                     message: "Instagram",
@@ -95,7 +85,7 @@ Widget _buildUi(double width) {
                             onTap: (){
                               Url.openLink(url:'https://www.instagram.com/_flirty.insane/');
                             },
-                            child: Image.asset("assets/instagram.png",height: 60,width: 60,))),
+                            child: Image.asset("assets/instagram.png",height: 40,width: 40,))),
                   ),
                   Tooltip(
                     message: "LinkedIn",
@@ -105,7 +95,7 @@ Widget _buildUi(double width) {
                             onTap: (){
                               Url.openLink(url:'https://www.linkedin.com/in/zaheer-ahmed-ansari-07a43215a/');
                             },
-                            child: Image.asset("assets/linkedin.png",height: 60,width: 60,))),
+                            child: Image.asset("assets/linkedin.png",height: 40,width: 40,))),
                   ),
                   Tooltip(
                     message: "Github",
@@ -115,7 +105,7 @@ Widget _buildUi(double width) {
                             onTap: (){
                               Url.openLink(url:'https://github.com/zaheeransari763');
                             },
-                            child: Image.asset("assets/github.png",height: 60,width: 60,))),
+                            child: Image.asset("assets/github.png",height: 40,width: 40,))),
                   ),
 
                 ],

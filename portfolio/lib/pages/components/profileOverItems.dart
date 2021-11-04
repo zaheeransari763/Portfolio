@@ -31,7 +31,7 @@ List<CarouselItemModel> carouselItems(Function(bool) onTapkey) => List.generate(
             style: GoogleFonts.oswald(
               color: Colors.white,
               fontSize: 40.0,
-              fontWeight: FontWeight.w900,
+              fontWeight: FontWeight.w700,
               height: 1.3,
             ),
           ),

@@ -61,7 +61,7 @@ class _ProfileState extends State<Profile> {
                             child: TextButton(
                               onPressed: headerItems(context,ontapheader)[index].onTap,
                               child: Text(
-                                headerItems(context,ontapheader)[index].title,
+                                headerItems(context,ontapheader)[index].title!,
                                 style: TextStyle(
                                   color: Colors.white,
                                   fontSize: 15.0,
@@ -80,7 +80,7 @@ class _ProfileState extends State<Profile> {
                               headerItems(context,ontapheader)[index].title;
                             },
                             child: Text(
-                              headerItems(context,ontapheader)[index].title,
+                              headerItems(context,ontapheader)[index].title!,
                               style: TextStyle(
                                 color: Colors.white,
                                 fontSize: 15.0,
@@ -102,41 +102,42 @@ class _ProfileState extends State<Profile> {
         ),
       ),
 
-      body:Container(
-        child: SingleChildScrollView(
-          controller: controller,
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Container(
-                child: Header(ontapheader,sKey: profilekey,),
-              ),
-              ProfileOver(ontap),
-              Padding(
-                padding: const EdgeInsets.symmetric(vertical: 28.0),
-                child: ProfileStats(),
-              ),
-              SizedBox(
-                height: 50,
-              ),
-              EducationSection(),
-              SizedBox(
-                height: 50,
-              ),
-              SkillsSection(),
-              SizedBox(
-                height: 20,
-              ),
-              SocialContact(),
-              SizedBox(
-                height: 20,
-              ),
-              Footer(),
+      body:
+          Container(
+            child: SingleChildScrollView(
+              controller: controller,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Container(
+                    child: Header(ontapheader,sKey: profilekey,),
+                  ),
+                  ProfileOver(ontap),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 28.0),
+                    child: ProfileStats(),
+                  ),
+                  SizedBox(
+                    height: 50,
+                  ),
+                  EducationSection(),
+                  SizedBox(
+                    height: 50,
+                  ),
+                  SkillsSection(),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  SocialContact(),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Footer(),
 
-            ],
+                ],
+              ),
+            ),
           ),
-        ),
-      ),
     );
   }
 }

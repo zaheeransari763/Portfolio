@@ -43,7 +43,7 @@ class _BlogState extends State<Blog> {
                       child: TextButton(
                         onPressed: headerItems(context,(){})[index].onTap,
                         child: Text(
-                          headerItems(context,(){})[index].title,
+                          headerItems(context,(){})[index].title!,
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 15.0,
@@ -59,7 +59,7 @@ class _BlogState extends State<Blog> {
                     cursor: SystemMouseCursors.click,
                     child: GestureDetector(
                       child: Text(
-                        headerItems(context,(){})[index].title,
+                        headerItems(context,(){})[index].title!,
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 15.0,

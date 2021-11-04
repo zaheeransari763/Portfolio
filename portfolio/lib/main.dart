@@ -7,13 +7,13 @@ import 'package:portfolio/pages/Work.dart';
 import 'package:portfolio/utils/constant.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 import 'package:responsive_framework/responsive_wrapper.dart';
-import 'package:firebase_core/firebase_core.dart';
 
-void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
+
+void main()  {
   runApp(MyApp());
 }
+
+
 
 class MyApp extends StatelessWidget {
   @override
@@ -29,8 +29,9 @@ class MyApp extends StatelessWidget {
         canvasColor: BackgroundColor,
         textTheme: GoogleFonts.latoTextTheme(),
       ),
+
       builder: (context, widget) => ResponsiveWrapper.builder(
-        ClampingScrollWrapper.builder(context, widget),
+        ClampingScrollWrapper.builder(context, widget!),
         defaultScale: true,
         breakpoints: [
           ResponsiveBreakpoint.resize(450, name: MOBILE),
@@ -49,7 +50,13 @@ class MyApp extends StatelessWidget {
         Community.id: (context) => Community(),
         Work.id: (context) => Work(),
       },
+
       home: Profile(),
     );
   }
 }
+
+
+
+
+

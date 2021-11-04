@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_icons/flutter_icons.dart';
+
 import 'package:google_fonts/google_fonts.dart';
 import 'package:portfolio/models/header_items.dart';
 import 'package:portfolio/pages/Blog.dart';
@@ -120,7 +120,7 @@ class HeaderRow extends StatelessWidget {
                 child: TextButton(
                   onPressed: item.onTap,
                   child: Text(
-                    item.title,
+                    item.title!,
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 13.0,
@@ -138,7 +138,7 @@ class HeaderRow extends StatelessWidget {
               child: GestureDetector(
                 onTap: item.onTap,
                 child: Text(
-                  item.title,
+                  item.title!,
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 15.0,
@@ -157,9 +157,9 @@ class HeaderRow extends StatelessWidget {
 
 
 class Header extends StatelessWidget{
-  final GlobalKey<ScaffoldState> sKey;
+  final GlobalKey<ScaffoldState>? sKey;
   final Function onTap;
-  Header(this.onTap,{ Key key,this.sKey}) : super(key: key);
+  Header(this.onTap,{ Key? key,this.sKey}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -175,7 +175,7 @@ class Header extends StatelessWidget{
     );
   }
 
-  Widget buildMobileHeader(GlobalKey<ScaffoldState> key) {
+  Widget buildMobileHeader(GlobalKey<ScaffoldState>? key) {
     return SafeArea(
       child: Padding(
         padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -188,12 +188,12 @@ class Header extends StatelessWidget{
             GestureDetector(
               onTap: () {
                 // Lets open drawer using global key
-                key.currentState.openEndDrawer();
+                key!.currentState!.openEndDrawer();
               },
               child: MouseRegion(
                 cursor: SystemMouseCursors.click,
                 child: Icon(
-                  FlutterIcons.menu_fea,
+                  Icons.apps,
                   color: Colors.white,
                   size: 28.0,
                 ),

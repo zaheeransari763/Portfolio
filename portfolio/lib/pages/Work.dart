@@ -52,7 +52,7 @@ class _WorkState extends State<Work> {
                             child: TextButton(
                               onPressed: headerItems(context,(){})[index].onTap,
                               child: Text(
-                                headerItems(context,(){})[index].title,
+                                headerItems(context,(){})[index].title!,
                                 style: TextStyle(
                                   color: Colors.white,
                                   fontSize: 15.0,
@@ -68,7 +68,7 @@ class _WorkState extends State<Work> {
                           cursor: SystemMouseCursors.click,
                           child: GestureDetector(
                             child: Text(
-                              headerItems(context,(){})[index].title,
+                              headerItems(context,(){})[index].title!,
                               style: TextStyle(
                                 color: Colors.white,
                                 fontSize: 15.0,

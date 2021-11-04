@@ -77,6 +77,7 @@ class SkillsSection extends StatelessWidget {
                 ),
                 SizedBox(
                   width: 50.0,
+                  height: 30.0,
                 ),
                 Expanded(
                   flex: ScreenHelper.isMobile(context) ? 0 : 4,
