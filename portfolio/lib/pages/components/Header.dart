@@ -1,9 +1,13 @@
+import 'dart:io';
+
+import 'package:file_saver/file_saver.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'package:google_fonts/google_fonts.dart';
+import 'package:http/http.dart';
+import 'package:path_provider/path_provider.dart';
 import 'package:portfolio/models/header_items.dart';
-import 'package:portfolio/pages/Blog.dart';
 import 'package:portfolio/pages/Community.dart';
 import 'package:portfolio/pages/Work.dart';
 import 'package:portfolio/utils/constant.dart';
@@ -13,6 +17,7 @@ import 'package:responsive_framework/responsive_wrapper.dart';
 import 'package:portfolio/Animations/hover_extension.dart';
 
 import '../Profile.dart';
+import 'Url.dart';
 
 List <HeaderItem> headerItems(BuildContext context, Function onTap)=>[
 HeaderItem(
@@ -40,19 +45,15 @@ HeaderItem(
       }
   ),
   HeaderItem(
-      title:"BLOG",
-      onTap: (){
-        Navigator.pushNamed(context, Blog.id);
-      }
-  ),
-  HeaderItem(
       title:"LETS WORK TOGETHER",
-      onTap: (){
-        print('Link to download Resume');
+      onTap: ()async {
+        Url.openLink(url:'https://firebasestorage.googleapis.com/v0/b/portfolio-548dc.appspot.com/o/resume%2Fcv.pdf?alt=media&token=3beef295-92e2-41cc-a985-aa5f6842da39');
       },
       isButton: true,
   ),
 ];
+
+
 
 class HeaderLogo extends StatelessWidget{
 

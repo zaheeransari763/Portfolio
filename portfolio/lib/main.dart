@@ -1,21 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:portfolio/pages/Blog.dart';
 import 'package:portfolio/pages/Community.dart';
 import 'package:portfolio/pages/Profile.dart';
 import 'package:portfolio/pages/Work.dart';
 import 'package:portfolio/utils/constant.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 import 'package:responsive_framework/responsive_wrapper.dart';
+import 'package:firebase_core/firebase_core.dart';
 
 
 void main()  {
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(MyApp());
 }
 
 
 
 class MyApp extends StatelessWidget {
+  final Future<FirebaseApp> _initialization =Firebase.initializeApp();
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -46,12 +48,22 @@ class MyApp extends StatelessWidget {
       ),
       routes: {
         Profile.id: (context) => Profile(),
-        Blog.id: (context) => Blog(),
         Community.id: (context) => Community(),
         Work.id: (context) => Work(),
       },
 
-      home: Profile(),
+      home: FutureBuilder(
+          future: _initialization,
+          builder: (context, snapshot){
+            if (snapshot.hasError){
+              return CircularProgressIndicator();
+            }
+            if(snapshot.connectionState == ConnectionState.done){
+              return Profile();
+            }
+            return CircularProgressIndicator();
+          },
+      ),
     );
   }
 }

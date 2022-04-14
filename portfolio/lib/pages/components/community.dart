@@ -121,7 +121,7 @@ class CommunityPage extends StatelessWidget{
                   Expanded(
                     flex: constraints.maxWidth > 720.0 ? 1 : 0,
                     child: Image.asset(
-                      "logo",
+                      "assets/exceptions_logo.jpg",
                       // Set width for image on smaller screen
                       width: constraints.maxWidth > 720.0 ? null : 350.0,
                     ),

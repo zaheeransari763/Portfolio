@@ -15,10 +15,6 @@ List<Skill> skills = [
     percentage: 70,
   ),
   Skill(
-    skill: "Shell Scripting",
-    percentage: 70,
-  ),
-  Skill(
     skill: "SQL",
     percentage: 55,
   ),
@@ -31,16 +27,20 @@ List<Skill> skills = [
     percentage: 90,
   ),
   Skill(
+    skill: "Github",
+    percentage: 90,
+  ),
+  Skill(
+    skill: "PowerBI",
+    percentage: 60,
+  ),
+  Skill(
+    skill: "Big Data  (Informatica, SSIS ,SSRS)",
+    percentage: 70,
+  ),
+  Skill(
     skill: "Java",
     percentage: 80,
-  ),
-  Skill(
-    skill: "Linux",
-    percentage: 50,
-  ),
-  Skill(
-    skill: "Javascript",
-    percentage: 30,
   ),
 ];
 
@@ -71,8 +71,8 @@ class SkillsSection extends StatelessWidget {
                 Expanded(
                   flex: ScreenHelper.isMobile(context) ? 0 : 2,
                   child: Image.asset(
-                    "assets/profile_pictwo.png",
-                    width: 300.0,
+                    "assets/skills.png",
+                    width: 400.0,
                   ),
                 ),
                 SizedBox(

@@ -67,6 +67,9 @@ class _WorkState extends State<Work> {
                         title: MouseRegion(
                           cursor: SystemMouseCursors.click,
                           child: GestureDetector(
+                            onTap: (){
+                              headerItems(context,ontapheader)[index].onTap!();
+                            },
                             child: Text(
                               headerItems(context,(){})[index].title!,
                               style: TextStyle(

@@ -6,11 +6,11 @@ import 'package:portfolio/utils/screen_helper.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 
 final List<Stat> stats = [
-  Stat(count: "10+", text: "Projects"),
+  Stat(count: "12+", text: "Projects"),
   Stat(count: "13+", text: "Skills"),
   Stat(count: "6+", text: "Certifications"),
-  Stat(count: "3+", text: "Years Experience"),
 ];
+
 
 class ProfileStats extends StatelessWidget {
   @override
@@ -75,3 +75,4 @@ class ProfileStats extends StatelessWidget {
     );
   }
 }
+

@@ -31,7 +31,7 @@ class _ProfileState extends State<Profile> {
     controller.animateTo(controller.position.maxScrollExtent, duration: Duration(seconds: 1), curve:Curves.easeIn);
 
     else
-      controller.animateTo(controller.position.maxScrollExtent-MediaQuery.of(context).size.height*0.7, duration: Duration(seconds: 1), curve:Curves.easeIn);
+      controller.animateTo(controller.position.maxScrollExtent-MediaQuery.of(context).size.height*0.5, duration: Duration(seconds: 1), curve:Curves.easeIn);
   }
 
   @override
@@ -77,7 +77,7 @@ class _ProfileState extends State<Profile> {
                           cursor: SystemMouseCursors.click,
                           child: GestureDetector(
                             onTap: (){
-                              headerItems(context,ontapheader)[index].title;
+                              headerItems(context,ontapheader)[index].onTap!();
                             },
                             child: Text(
                               headerItems(context,ontapheader)[index].title!,
@@ -118,11 +118,16 @@ class _ProfileState extends State<Profile> {
                     child: ProfileStats(),
                   ),
                   SizedBox(
-                    height: 50,
+                    height: 40,
                   ),
-                  EducationSection(),
+                  Column(
+                    children: [
+                      ExperinceSection(),
+                      EducationSection(),
+                    ],
+                  ),
                   SizedBox(
-                    height: 50,
+                    height: 40,
                   ),
                   SkillsSection(),
                   SizedBox(

@@ -413,6 +413,383 @@ class Projects extends StatelessWidget {
                       ),
                     ],
                   ),
+                  Flex(
+                    direction: constraints.maxWidth > 720
+                        ? Axis.horizontal
+                        : Axis.vertical,
+                    children: [
+                      // Disable expanded on smaller screen to avoid Render errors by setting flex to 0
+                      Expanded(
+                        flex: constraints.maxWidth > 720.0 ? 1 : 0,
+                        child: Image.asset(
+                          "assets/Halal.png",
+                          // Set width for image on smaller screen
+                          width: constraints.maxWidth > 720.0 ? null : 350.0,
+                        ),
+                      ),
+                      SizedBox(
+                        width: 40,
+                      ),
+                      Expanded(
+                        flex: constraints.maxWidth > 720.0 ? 1 : 0,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              "HYBRID APP",
+                              style: GoogleFonts.oswald(
+                                color: PrimaryColor,
+                                fontWeight: FontWeight.w900,
+                                fontSize: 16.0,
+                              ),
+                            ),
+                            SizedBox(
+                              height: 15.0,
+                            ),
+                            Text(
+                              "HALAL MEAT SYSTEM",
+                              style: GoogleFonts.oswald(
+                                color: Colors.white,
+                                fontWeight: FontWeight.w900,
+                                height: 1.3,
+                                fontSize: 35.0,
+                              ),
+                            ),
+                            SizedBox(
+                              height: 10.0,
+                            ),
+                            Text(
+                              halal,
+                              textAlign: TextAlign.justify,
+                              style: TextStyle(
+                                color: CaptionColor,
+                                height: 1.5,
+                                fontSize: 15.0,
+                              ),
+                            ),
+                            SizedBox(
+                              height: 25.0,
+                            ),
+
+                            Container(
+                              decoration: BoxDecoration(
+                                color: PrimaryColor,
+                                borderRadius: BorderRadius.circular(8.0),
+                              ),
+                              height: 48.0,
+                              padding: EdgeInsets.symmetric(
+                                horizontal: 28.0,
+                              ),
+                              child: TextButton(
+                                onPressed: () {
+                                //  Url.openLink(url:'https://github.com/zaheeransari763/University_All_In_One');
+                                },
+                                child: Center(
+                                  child: Text(
+                                    "YET TO GO LIVE",
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 13.0,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ).moveUpHover,
+                            SizedBox(
+                              width: 10.0,
+                            )
+                          ],
+                        ),
+                      ),
+
+                    ],
+                  ),
+
+                  Flex(
+                    direction: constraints.maxWidth > 720
+                        ? Axis.horizontal
+                        : Axis.vertical,
+                    children: [
+                      // Disable expanded on smaller screen to avoid Render errors by setting flex to 0
+                      Expanded(
+                        flex: constraints.maxWidth > 720.0 ? 1 : 0,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            SizedBox(
+                              height: 50,
+                            ),
+                            Text(
+                              "HYBRID APP",
+                              style: GoogleFonts.oswald(
+                                color: PrimaryColor,
+                                fontWeight: FontWeight.w900,
+                                fontSize: 16.0,
+                              ),
+                            ),
+                            SizedBox(
+                              height: 15.0,
+                            ),
+                            Text(
+                              "HUNGRY",
+                              style: GoogleFonts.oswald(
+                                color: Colors.white,
+                                fontWeight: FontWeight.w900,
+                                height: 1.3,
+                                fontSize: 35.0,
+                              ),
+                            ),
+                            SizedBox(
+                              height: 10.0,
+                            ),
+                            Text(
+                              hungry,
+                              textAlign: TextAlign.justify,
+                              style: TextStyle(
+                                color: CaptionColor,
+                                height: 1.5,
+                                fontSize: 15.0,
+                              ),
+                            ),
+                            SizedBox(
+                              height: 25.0,
+                            ),
+
+                            Container(
+                              decoration: BoxDecoration(
+                                color: PrimaryColor,
+                                borderRadius: BorderRadius.circular(8.0),
+                              ),
+                              height: 48.0,
+                              padding: EdgeInsets.symmetric(
+                                horizontal: 28.0,
+                              ),
+                              child: TextButton(
+                                onPressed: () {
+                                  Url.openLink(url:'https://play.google.com/store/apps/details?id=com.frynds.hungry');
+                                },
+                                child: Center(
+                                  child: Text(
+                                    "GET ON PLAYSTORE",
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 13.0,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ).moveUpHover,
+                            SizedBox(
+                              width: 10.0,
+                            )
+                          ],
+                        ),
+                      ),
+                      SizedBox(
+                        width: 40,
+                      ),
+                      Expanded(
+                        flex: constraints.maxWidth > 720.0 ? 1 : 0,
+                        child: Image.asset(
+                          "assets/Hungry.png",
+                          // Set width for image on smaller screen
+                          width: constraints.maxWidth > 720.0 ? null : 350.0,
+                        ),
+                      ),
+                    ],
+                  ),
+                  Flex(
+                    direction: constraints.maxWidth > 720
+                        ? Axis.horizontal
+                        : Axis.vertical,
+                    children: [
+                      // Disable expanded on smaller screen to avoid Render errors by setting flex to 0
+                      Expanded(
+                        flex: constraints.maxWidth > 720.0 ? 1 : 0,
+                        child: Image.asset(
+                          "assets/Scholars.png",
+                          // Set width for image on smaller screen
+                          width: constraints.maxWidth > 720.0 ? null : 350.0,
+                        ),
+                      ),
+                      SizedBox(
+                        width: 40,
+                      ),
+                      Expanded(
+                        flex: constraints.maxWidth > 720.0 ? 1 : 0,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              "HYBRID APP",
+                              style: GoogleFonts.oswald(
+                                color: PrimaryColor,
+                                fontWeight: FontWeight.w900,
+                                fontSize: 16.0,
+                              ),
+                            ),
+                            SizedBox(
+                              height: 15.0,
+                            ),
+                            Text(
+                              "TECHNO-LEARN",
+                              style: GoogleFonts.oswald(
+                                color: Colors.white,
+                                fontWeight: FontWeight.w900,
+                                height: 1.3,
+                                fontSize: 35.0,
+                              ),
+                            ),
+                            SizedBox(
+                              height: 10.0,
+                            ),
+                            Text(
+                              technolearn,
+                              textAlign: TextAlign.justify,
+                              style: TextStyle(
+                                color: CaptionColor,
+                                height: 1.5,
+                                fontSize: 15.0,
+                              ),
+                            ),
+                            SizedBox(
+                              height: 25.0,
+                            ),
+
+                            Container(
+                              decoration: BoxDecoration(
+                                color: PrimaryColor,
+                                borderRadius: BorderRadius.circular(8.0),
+                              ),
+                              height: 48.0,
+                              padding: EdgeInsets.symmetric(
+                                horizontal: 28.0,
+                              ),
+                              child: TextButton(
+                                onPressed: () {
+                                  Url.openLink(url:'https://play.google.com/store/apps/details?id=com.scholars.technolearn');
+                                },
+                                child: Center(
+                                  child: Text(
+                                    "GET ON PLAYSTORE",
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 13.0,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ).moveUpHover,
+                            SizedBox(
+                              width: 10.0,
+                            )
+                          ],
+                        ),
+                      ),
+
+                    ],
+                  ),
+                  Flex(
+                    direction: constraints.maxWidth > 720
+                        ? Axis.horizontal
+                        : Axis.vertical,
+                    children: [
+                      // Disable expanded on smaller screen to avoid Render errors by setting flex to 0
+                      Expanded(
+                        flex: constraints.maxWidth > 720.0 ? 1 : 0,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            SizedBox(
+                              height: 50,
+                            ),
+                            Text(
+                              "HYBRID APP",
+                              style: GoogleFonts.oswald(
+                                color: PrimaryColor,
+                                fontWeight: FontWeight.w900,
+                                fontSize: 16.0,
+                              ),
+                            ),
+                            SizedBox(
+                              height: 15.0,
+                            ),
+                            Text(
+                              "RIPRO",
+                              style: GoogleFonts.oswald(
+                                color: Colors.white,
+                                fontWeight: FontWeight.w900,
+                                height: 1.3,
+                                fontSize: 35.0,
+                              ),
+                            ),
+                            SizedBox(
+                              height: 10.0,
+                            ),
+                            Text(
+                              ripro,
+                              textAlign: TextAlign.justify,
+                              style: TextStyle(
+                                color: CaptionColor,
+                                height: 1.5,
+                                fontSize: 15.0,
+                              ),
+                            ),
+                            SizedBox(
+                              height: 25.0,
+                            ),
+
+                            Container(
+                              decoration: BoxDecoration(
+                                color: PrimaryColor,
+                                borderRadius: BorderRadius.circular(8.0),
+                              ),
+                              height: 48.0,
+                              padding: EdgeInsets.symmetric(
+                                horizontal: 28.0,
+                              ),
+                              child: TextButton(
+                                onPressed: () {
+                                  Url.openLink(url:'https://play.google.com/store/apps/details?id=com.ripromain.users');
+                                },
+                                child: Center(
+                                  child: Text(
+                                    "GET ON PLAYSTORE",
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 13.0,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ).moveUpHover,
+                            SizedBox(
+                              width: 10.0,
+                            )
+                          ],
+                        ),
+                      ),
+                      SizedBox(
+                        width: 40,
+                      ),
+                      Expanded(
+                        flex: constraints.maxWidth > 720.0 ? 1 : 0,
+                        child: Image.asset(
+                          "assets/ripro.png",
+                          // Set width for image on smaller screen
+                          width: constraints.maxWidth > 720.0 ? null : 350.0,
+                        ),
+                      ),
+                    ],
+                  ),
 
                   Center(
                     child: Container(

@@ -69,6 +69,9 @@ class _CommunityState extends State<Community> {
                         title: MouseRegion(
                           cursor: SystemMouseCursors.click,
                           child: GestureDetector(
+                            onTap: (){
+                              headerItems(context,ontapheader)[index].onTap!();
+                            },
                             child: Text(
                               headerItems(context, (){})[index].title!,
                               style: TextStyle(
